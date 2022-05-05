@@ -1,4 +1,3 @@
-
 local space = 0x20
 local l = workspace.joao706.HumanoidRootPart
 local c = workspace.Camera
@@ -29,7 +28,7 @@ function weit2()
     keyrelease(w)
 end
 wait(2)
-for i = 1, 7 do
+for i = 1, 36 do
     for i = 1, 40 do
         mousemoverel(0, 3)
         wait(0.06)
