@@ -64,8 +64,8 @@ function wallkick()
     wait(0.15)
     keyrelease(q)
     keyrelease(space)
-    v = workspace.joao70006.HumanoidRootPart
-    v.Velocity = v.Velocity * Vector3.new(1.2, 0, 1.2)
+    v = workspace.holy1one.HumanoidRootPart
+    v.Velocity = v.Velocity * Vector3.new(1.35, 0, 1.35)
 end
 function wallboost()
     keypress(0x20)
@@ -81,7 +81,7 @@ function reset()
     part.Size = Vector3.new(6, 1, 6)
     part.Transparency = 1
     part.Anchored = true
-    part.Position = workspace.joao70006.HumanoidRootPart.Position - Vector3.new(0, 1.6, 0)
+    part.Position = workspace.holy1one.HumanoidRootPart.Position - Vector3.new(0, 1.6, 0)
     part.Parent = workspace
     wait(10)
     part:Destroy()
@@ -109,6 +109,12 @@ if key == "r" then
     reset()
 end
 if key == "3" then
-    workspace.joao70006.HumanoidRootPart.Velocity = workspace.joao70006.HumanoidRootPart.Velocity * Vector3.new(1.3, 1.3, 1.3)
+    workspace.holy1one.HumanoidRootPart.Velocity = workspace.holy1one.HumanoidRootPart.Velocity * Vector3.new(1.3, 1.3, 1.3)
 end
+end)
+game:GetService("RunService").Heartbeat:Connect(function()
+    local pool = workspace.Pad.Pillow
+    pool.Position = workspace.holy1ne.HumanoidRootPart.Position - Vector3.new(0, 17, 0)
+    pool.Size = Vector3.new(15, 15, 15)
+    pool.Transparency = 1
 end)
