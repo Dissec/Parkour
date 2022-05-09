@@ -39,6 +39,11 @@ function dash()
     wait(.3)
     game.Workspace.Gravity = 75
 end
+local mouse = game.Players.LocalPlayer:GetMouse()
+
+mouse.KeyDown:connect(function(func)
+
+local key = func:lower()
 if key == "e" then
     repeat
     task.wait()
@@ -57,11 +62,6 @@ end
 if key == "3" then
     rootpart.Velocity = rootpart.Velocity * Vector3.new(1.3, 1.3, 1.3)
 end
-local mouse = game.Players.LocalPlayer:GetMouse()
-
-mouse.KeyDown:connect(function(func)
-
-local key = func:lower()
 if key == "q" then
     dash()
 end
