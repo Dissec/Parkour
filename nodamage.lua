@@ -1,19 +1,13 @@
-local b=workspace:WaitForChild("joao706"):WaitForChild("HumanoidRootPart")
+local player = game.Players.LocalPlayer.Name
+_G.enabled = true
 
-while wait(0.001) do
-    if b.Velocity.y < -75 and _G.enabled then
-        keypress(0xA0)
-        wait(.001)
-        print("fall")
-        local part = Instance.new("Part")
-        part.Size = Vector3.new(6, 1, 6)
-        part.Transparency = 1
-        part.Position = workspace.joao706.HumanoidRootPart.Position - Vector3.new(0, 2.5, 0)
-        part.Anchored = true
-        part.Parent = workspace
-        wait(0.001)
-        keyrelease(0xA0)
-        wait(0.05)
-        part:Destroy()
+for i=1, 50 do
+wait()
+for _, v in pairs(workspace:WaitForChild(player):GetDescendants()) do
+    if v:IsA("Part") then
+        if v.Velocity.y < -50 then
+            v.Velocity = Vector3.new(0, 0, 0)
+        end
     end
+end
 end

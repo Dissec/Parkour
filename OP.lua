@@ -1,6 +1,7 @@
 
 local space = 0x20
-local l = workspace.joao706.HumanoidRootPart
+local n = game.Players.LocalPlayer.Name
+local l = workspace[n].HumanoidRootPart
 local c = workspace.Camera
 local w = 0x57
 local shift = 0xA0
@@ -13,7 +14,7 @@ function weit()
     keyrelease(w)
 end
 wait(2)
-for i = 1, 4 do
+function old()
     l.Velocity = Vector3.new(0, 0, 0)
     l.Velocity = Vector3.new(255, 0, 0)
     l.CFrame = CFrame.new(600, 312, 500, 0.0255457312, 3.4619756e-09, -0.999673665, -4.58374529e-08, 1, 2.29177211e-09, 0.999673665, 4.57639473e-08, 0.0255457312)
@@ -27,7 +28,7 @@ for i = 1, 4 do
     wait(.3)
     weit()
 end
-for i = 1, 4 do
+for i = 1, 40000 do
     l.Velocity = Vector3.new(0, 0, 0)
     l.Velocity = Vector3.new(255, 0, 0)
     l.CFrame = CFrame.new(600, 312, 191, 0.0255457312, 3.4619756e-09, -0.999673665, -4.58374529e-08, 1, 2.29177211e-09, 0.999673665, 4.57639473e-08, 0.0255457312)

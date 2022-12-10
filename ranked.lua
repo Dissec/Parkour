@@ -20,6 +20,7 @@ function wallboost()
   keypress(0x20)
   keyrelease(0x20)
   mousemoverel(-1000, 0)
+  rootpart.Velocity += Vector3.new(0, 80, 0)
 end
 function reset()
   local space = 0x20
@@ -36,14 +37,14 @@ function reset()
     game:GetService("RunService").Heartbeat:Wait()
     part.Position = rootpart.Position - Vector3.new(0, 1.6, 0)
   end
-  wait(3)
+  wait(2)
   part:Destroy()
 end
 function dash()
   local name = game.Players.LocalPlayer.Name
   local rootpart = workspace[name].HumanoidRootPart
   local rotation = game.Workspace.CurrentCamera.CFrame.LookVector
-  rootpart.Velocity = Vector3.new(rotation.x, 0, rotation.z) * 130
+  rootpart.Velocity = Vector3.new(rotation.x, 0, rotation.z) * 100
   keypress(0x20)
   wait()
   keyrelease(0x20)
@@ -61,15 +62,6 @@ if key == "e" then
   task.wait()
   until isrbxactive()
   wallboost()
-end
-if key == "f" then
-  repeat
-  task.wait()
-  until isrbxactive()
-  wallkick()
-end
-if key == "r" then
-  reset()
 end
 if key == "3" then
   local space = 0x20

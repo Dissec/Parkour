@@ -56,9 +56,7 @@ if key == "f" then
     until isrbxactive()
     wallkick()
 end
-if key == "r" then
-    reset()
-end
+
 if key == "3" then
     rootpart.Velocity = rootpart.Velocity * Vector3.new(1.3, 1.3, 1.3)
 end
