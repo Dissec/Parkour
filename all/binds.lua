@@ -1,26 +1,26 @@
 local player = game.Players.LocalPlayer.Name
 local rootpart = workspace:WaitForChild(player):WaitForChild("HumanoidRootPart")
-function dash()
+function dash(power)
     local name = game.Players.LocalPlayer.Name
     local rootpart = workspace:WaitForChild(name):WaitForChild("HumanoidRootPart")
     local rotation = game.Workspace.CurrentCamera.CFrame.LookVector
-    rootpart.Velocity = Vector3.new(rotation.x, 0, rotation.z) * 85
+    rootpart.Velocity = Vector3.new(rotation.x, 0, rotation.z) * power
     game.Workspace.Gravity = 5
     wait(.3)
     game.Workspace.Gravity = 75
 end
-function wallkick()
+function wallkick(power)
     keypress(0x20)
 	wait(0.1)
 	keyrelease(0x20)
-	dash()
+	dash(power)
     rootpart.Velocity = rootpart.Velocity * Vector3.new(1.35, 0, 1.35)
 end
 function wallboost()
     keypress(0x20)
     keyrelease(0x20)
     mousemoverel(1000, 0)
-    wait()
+    wait(.06)
     keypress(0x20)
     keyrelease(0x20)
     mousemoverel(-1000, 0)
@@ -56,7 +56,13 @@ if key == "f" then
     repeat
     task.wait()
     until isrbxactive()
-    wallkick()
+    wallkick(80)
+end
+if key == "q" then
+    repeat
+    task.wait()
+    until isrbxactive()
+    wallkick(100)
 end
 if key == "1" then
     reset()
