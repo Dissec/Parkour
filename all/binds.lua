@@ -50,7 +50,7 @@ if key == "r" then
     repeat
     task.wait()
     until isrbxactive()
-    wallboost()
+    wallkick(140)
 end
 if key == "f" then
     repeat
@@ -67,8 +67,8 @@ end
 if key == "1" then
     reset()
 end
-if key == "l" then
-    wallkick(140)
+if key == "p" then
+    wallboost()
 end
 end)
 local name = game.Players.LocalPlayer.Name
