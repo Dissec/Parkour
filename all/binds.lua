@@ -6,11 +6,11 @@ function dash(power)
     local rotation = game.Workspace.CurrentCamera.CFrame.LookVector
     rootpart.Velocity = Vector3.new(rotation.x, 0, rotation.z) * power
     game.Workspace.Gravity = 5
-    wait(.3)
-    game.Workspace.Gravity = 75
     mousemoverel(1000, 0)
     wait(0.02)
     mousemoverel(-1000, 0)
+    wait(.3)
+    game.Workspace.Gravity = 75
 end
 function wallkick(power)
     keypress(0x20)
