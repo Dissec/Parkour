@@ -5,12 +5,10 @@ function dash(power)
     local rootpart = workspace:WaitForChild(name):WaitForChild("HumanoidRootPart")
     local rotation = game.Workspace.CurrentCamera.CFrame.LookVector
     rootpart.Velocity = Vector3.new(rotation.x, 0, rotation.z) * power
-    game.Workspace.Gravity = 5
     mousemoverel(1000, 0)
     wait(0.02)
     mousemoverel(-1000, 0)
     wait(.3)
-    game.Workspace.Gravity = 75
 end
 function wallkick(power)
     keypress(0x20)
