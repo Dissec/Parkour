@@ -68,6 +68,10 @@ end
 if key == "1" then
     reset()
 end
+if key == "3" then
+    local rootpart = workspace:WaitForChild(player):WaitForChild("HumanoidRootPart")
+    rootpart.Velocity = rootpart.Velocity * Vector3.new(3, 3, 3)
+end
 end)
 local name = game.Players.LocalPlayer.Name
 game:GetService("RunService").Heartbeat:Connect(function()
