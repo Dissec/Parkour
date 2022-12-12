@@ -70,7 +70,7 @@ if key == "1" then
 end
 if key == "3" then
     local rootpart = workspace:WaitForChild(player):WaitForChild("HumanoidRootPart")
-    rootpart.Velocity = rootpart.Velocity * Vector3.new(3, 3, 3)
+    rootpart.Velocity = rootpart.Velocity * Vector3.new(5, 1, 5)
 end
 end)
 local name = game.Players.LocalPlayer.Name
