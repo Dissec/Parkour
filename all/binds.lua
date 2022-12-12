@@ -59,7 +59,7 @@ if key == "f" then
     repeat
     task.wait()
     until isrbxactive()
-    wallkick(100)
+    wallkick(90)
 end
 if key == "v" then
     repeat
