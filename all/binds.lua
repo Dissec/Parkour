@@ -57,12 +57,18 @@ if key == "f" then
     task.wait()
     until isrbxactive()
     wallkick(100)
+    mousemoverel(1000, 0)
+    wait(0.04)
+    mousemoverel(-1000, 0)
 end
-if key == "c" then
+if key == "v" then
     repeat
     task.wait()
     until isrbxactive()
     wallkick(140)
+    mousemoverel(1000, 0)
+    wait(0.04)
+    mousemoverel(-1000, 0)
 end
 if key == "1" then
     reset()
