@@ -6,7 +6,7 @@ function dash(power)
     local rotation = game.Workspace.CurrentCamera.CFrame.LookVector
     rootpart.Velocity = Vector3.new(rotation.x, 0, rotation.z) * power
     mousemoverel(1000, 0)
-    wait(0.02)
+    wait(_G.delay)
     mousemoverel(-1000, 0)
     wait(.3)
 end
