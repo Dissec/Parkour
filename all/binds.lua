@@ -9,7 +9,7 @@ function dash(power)
     wait(.3)
     game.Workspace.Gravity = 75
     mousemoverel(1000, 0)
-    wait(0.04)
+    wait(0.02)
     mousemoverel(-1000, 0)
 end
 function wallkick(power)
