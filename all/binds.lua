@@ -56,15 +56,9 @@ if key == "f" then
     repeat
     task.wait()
     until isrbxactive()
-    wallkick(85)
+    wallkick(100)
 end
-if key == "q" then
-    repeat
-    task.wait()
-    until isrbxactive()
-    wallkick(110)
-end
-if key == "3" then
+if key == "c" then
     repeat
     task.wait()
     until isrbxactive()
