@@ -1,4 +1,13 @@
-function dropdash()
+-- Services
+local Players = game:GetService("Players")
+
+-- Variables
+local Player = Players.LocalPlayer
+local Mouse = Player:GetMouse()
+
+-- Private
+local function dropdash()
+
     keypress(0x20)
     wait(_G.dd)
     keyrelease(0x20)
@@ -11,12 +20,14 @@ function dropdash()
 
     mousemoverel(-1000, 0)
 end
-local mouse = game.Players.LocalPlayer:GetMouse()
 
-mouse.KeyDown:connect(function(func)
+-- Public
 
-local key = func:lower()
-    if key == "f" then
+
+Mouse.KeyDown:connect(function(Key)
+    Key = Key:lower()
+
+    if Key == "f" then
         dropdash()
     end
-end
+end)
